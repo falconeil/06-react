@@ -1,4 +1,5 @@
 import React from 'react'
+import Places from './Places.css'
 //
 class Places extends React.Component {
 //
@@ -16,9 +17,10 @@ render() {
 
 		<h1>{this.state.places.length} Places</h1>,
 		<div className='thumbnails'>{this.state.places.map(p =>{
-			<div className='thumbnails'>{p}</div>
-		})</div>
-	}
+			<div className='thumbnails'>{p}</div>}
+		)}
+		</div>
+	)
 }
 
 export default Places

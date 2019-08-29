@@ -1,6 +1,8 @@
-import Places from './components/Places'
+
 
 .places {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr 1fr
 }
+
+export default Places.css //
