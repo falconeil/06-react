@@ -1,5 +1,6 @@
 import React from 'react'
 import Places from './Places.css'
+import Favorites from './Favorites.js'
 //
 class Places extends React.Component {
 //
@@ -20,6 +21,7 @@ render() {
 			<div className='thumbnails'>{p}</div>}
 		)}
 		</div>
+		  <Favorites />
 	)
 }
 
