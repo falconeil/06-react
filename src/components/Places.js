@@ -11,13 +11,11 @@ state = {
 render() {
 	return (
 
+		<h1>{this.state.places.length} Places</div>,
+		<div className='thumbnails'>{this.state.places.map((p,i) =>{
+			p {this.state.places.title} {this.state.places.price}
+		} </div>
 
-
-		<h1>{this.state.places.length}</div>,
-		<p>{this.state.title} </p>
-		{
-		this.state.places.map((p,i) => <Places key={i}/>)
-	}
 	)
 	}
 }
