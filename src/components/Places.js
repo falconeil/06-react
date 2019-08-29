@@ -1,11 +1,14 @@
-import Places from 'react'
-
-class App extends React.Component {
-
-// state = {
-// 	places: ['1', '2', '3', '4', '5'],
-// 	title: ['Barcelona', 'Dublin', 'London', 'Tokyo', 'Sofia'],
-// 	price: ['$200', '$170', '$340', '$670', '$57']
+import React from 'react'
+//
+class Places extends React.Component {
+//
+state = {
+places: [
+	{title: 'Casino Royale', price: 897 , location: 'London'},
+	{title: 'Camino', price: 78 , location: 'Madrid'},
+	{title: 'Transpotting', price: 1973 , location: 'Scotland'},
+	{title: 'Adele', price: 2016 , location: 'Paris'},
+	{title: 'Taxi', price: 2006 , location: 'Teheran'}
 //
 // }
 render() {
@@ -19,6 +22,6 @@ render() {
 	// )
 )
 	}
-}
-
+// }
+//
 export default Places

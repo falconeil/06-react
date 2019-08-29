@@ -1,5 +1,4 @@
 import React from 'react';
-import Places from './components/Places'
 
 class App extends React.Component {
 	render() {
