@@ -7,11 +7,11 @@ class Places extends React.Component {
 //
 state = {
 places: [
-	{title: 'Casino Royale', price: 897 , location: 'London'},
-	{title: 'Camino', price: 78 , location: 'Madrid'},
-	{title: 'Transpotting', price: 1973 , location: 'Scotland'},
-	{title: 'Adele', price: 2016 , location: 'Paris'},
-	{title: 'Taxi', price: 2006 , location: 'Teheran'}]
+	{title: 'El Despertado', price: 220 , location: 'Costa Rica'},
+	{title: 'Lost Villa', price: 78 , location: 'Thailand'},
+	{title: 'God Save the Queen', price: 273 , location: 'Scotland'},
+	{title: 'Dorayaki', price: 637 , location: 'Tokyo'},
+	{title: 'Inshallah', price: 2006 , location: 'Sousse'}]
 }
 
 render() {
