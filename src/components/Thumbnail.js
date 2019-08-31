@@ -41,7 +41,7 @@ render() {
 				<div>{this.props.p.location}</div>
 
 
-				<button onClick={(e) => this.setTrue()}>Click me</button>
+				<button className={this.state.liked ? 'liked' : ' '} onClick={(e) => this.setTrue()}>Click me</button>
 
 			</div>
 		)
