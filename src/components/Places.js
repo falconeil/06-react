@@ -20,7 +20,7 @@ render() {
 			<h1>{this.state.places.length} Places <Favorites /></h1>
 			<div className='places'>
 			{
-				this.state.places.map((p,i) => {return <Thumbnail p={p}/>})
+				this.state.places.map((p,i) => {return <Thumbnail key={i} p={p}/>})
 			}
 			</div>
 		</div>
