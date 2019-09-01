@@ -1,0 +1,9 @@
+
+.searchBar{
+	display: inline;
+
+}
+
+.searchBar input {
+	margin: 20px;
+}

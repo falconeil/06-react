@@ -2,6 +2,7 @@ import React from 'react'
 import '../styles/Places.css'
 import Favorites from './Favorites.js'
 import Thumbnail from './Thumbnail.js'
+import Search from './Search.js'
 //
 class Places extends React.Component {
 //
@@ -36,6 +37,7 @@ setTrue = (i) => {
 render() {
 	return (
 		<div>
+		<Search/>
 			<h1>{this.state.places.length} Places</h1><div> <Favorites fav={this.state.places.filter((e => e.liked))}/></div>
 			<div className='places'>
 			{

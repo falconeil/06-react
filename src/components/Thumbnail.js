@@ -24,8 +24,6 @@ render() {
 				<div>{this.props.p.title}</div>
 				<div>{this.props.p.price}</div>
 				<div>{this.props.p.location}</div>
-{this.state.text}
-				<input ref='textBox'  type='text'/>
 				<button className={this.props.p.liked ? 'liked' : ''} onClick={() =>{
 					this.props.setTrue(this.props.idPlace)
 			 	}}>Like it!</button>
