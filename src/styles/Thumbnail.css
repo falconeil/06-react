@@ -1,7 +1,7 @@
-.thumbnail {
+/* .thumbnail {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-	border: 2px solid grey;
+	border: 1px solid grey;
 	column-gap: 20px;
 	box-shadow: 1px 5px 10px rgba(0,0,155,.5);
 	border-radius: 5px;
@@ -9,8 +9,37 @@
   align-items: center;
   justify-content: center
 
-}
+} */
+
+
+.thumbnail{
+	border: 1px solid rgb(192,192,192);
+	height: 200px;
+	width: 160px;
+	border-radius: 5px;
+	font-family: Arial;
+	padding: 20px;
+	align-items: center;
+  justify-content: center
+	}
+
+.thumbnail:hover {
+ cursor: pointer;
+	  border: 1px solid  #01988F;
+	}
+
+
+
 
 .liked {
 	background-color: green;
+	position: relative;
+
+}
+
+button {
+	font-size: 15px;
+	float: right;
+	margin-top: 100px;
+	margin-right: 20px;;
 }
