@@ -54,8 +54,7 @@ this.setState({
 search = (e) => {
 
 	let letters = e.target.value.toUpperCase()
-	console.log(e)
-
+	
 	let places = this.state.originalPlaces.filter((a) =>  a.title.toUpperCase().includes(letters))
 
 	this.setState({
