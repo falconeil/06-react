@@ -1,53 +1,64 @@
 import React from 'react'
 import '../styles/Places.css'
-import Favorites from './Favorites.js'
-import Thumbnail from './Thumbnail.js'
-import Search from './Search.js'
-//
+import Favorites from './Favorites'
+import Thumbnail from './Thumbnail'
+import Search from './Search'
+
 class Places extends React.Component {
-//
+
 state = {
-places: [
-	{title: 'El Despertado', price: 220 , location: 'Costa Rica', liked: false},
-	{title: 'Lost Villa', price: 78 , location: 'Thailand', liked: false},
-	{title: 'God Save the Queen', price: 273, location: 'Scotland', liked: false},
-	{title: 'Dorayaki', price: 637 , location: 'Tokyo', liked: false},
-	{title: 'Inshallah', price: 2006 , location: 'Sousse', liked: false}]
+	places: [{
+		title: 'Terra Catalana',
+		price: 56,
+		location:'Barcelona',
+		liked: false
+	},
+	{
+		title: 'Madriles',
+		price: 886,
+		location:'Madrid',
+		liked: false
+	},
+	{
+		title: 'Getxo',
+		price: 106,
+		location:'Bilbao',
+		liked: false
+	},
+	{
+		title: 'OCoruña',
+		price: 300,
+		location:'Galicia',
+		liked: false
+	}],
 }
 
 
+toggle = (i) => {
 
-setTrue = (i) => {
-	// 1.Make a copy
-	let places = this.state.places
-	// 2 Change it
+let places = this.state.places
 
-	places[i].liked ? places[i].liked= false : places[i].liked= true
+places[i].liked ? places[i].liked= false : places[i].liked= true
 
-	// 3.put it back in the state
-	this.setState({
-		places: places})
+this.setState({
+	places: places
+})
+}
+
+	render() {
+
+		return (
+			<div>
+				<h1>{this.state.places.length} Places </h1>
+				<div className='thumbnails'>{
+				this.state.places.map((n, i) => {return <Thumbnail  n={n} toggle={this.toggle} index={i}/>
+			})
+			}</div>
+					<Favorites fav={this.state.places.filter((e) => e.liked)}/>
+	</div>
+
+		)
 	}
-	//copy
-	//change
-	//steState
-
-
-
-render() {
-	return (
-		<div>
-		<Search/>
-			<h1>{this.state.places.length} Places</h1><div> <Favorites fav={this.state.places.filter((e => e.liked))}/></div>
-			<div className='places'>
-			{
-				this.state.places.map((p,i) => {return <Thumbnail key={i} idPlace={i} p={p} setTrue={this.setTrue}/>})
-			}
-			</div>
-		</div>
-
-)
-}
 }
 
-export default Places;
+export default Places

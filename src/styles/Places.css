@@ -1,8 +1,6 @@
-
-
-.places {
+.thumbnails {
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
 	grid-column-gap: 20px;
-	height: 200px;
+	border-radius: 5px;
 }

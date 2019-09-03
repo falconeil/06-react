@@ -1,34 +1,23 @@
-import React from 'react'
+import React from 'react';
 import '../styles/Thumbnail.css'
 
 class Thumbnail extends React.Component {
 
-	state = {
-				text: 'Initialtext'
-			}
 
 
 
-
-	clickme() {
-		this.setState({text: this.refs.textBox.value})}
+	render() {
 
 
+		return(
 
-
-render() {
-
-	return (
-
-			<div className='thumbnail'>
-				<div>{this.props.p.title}</div>
-				<div>{this.props.p.price}</div>
-				<div>{this.props.p.location}</div>
-				<button className={this.props.p.liked ? 'liked' : ''} onClick={() =>{
-					this.props.setTrue(this.props.idPlace)
-			 	}}>Like it!</button>
-
+			<div className='border'>
+				<div className='thumbnail'>{this.props.n.title} </div>
+				<div className='thumbnail'>{this.props.n.price} </div>
+				<div className='thumbnail'>{this.props.n.location} </div>
+				<button className={this.props.n.liked ? 'liked' : ''} onClick={ () => {this.props.toggle(this.props.index)}}>Click me</button>
 			</div>
+
 		)
 	}
 }
