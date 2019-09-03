@@ -3,9 +3,10 @@ import ReactDOM from 'react-dom';
 import './index.css';
 
 import Places from './components/Places';
+import Routes from './components/Routes';
 import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(<Places />, document.getElementById('root'));
+ReactDOM.render(<Routes />, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
