@@ -1,0 +1,8 @@
+.pictures {
+height: 100vh;
+width: 100vw;
+background-image: url('https://q-ak.bstatic.com/images/hotel/max1024x768/186/186223203.jpg');
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center;
+}
