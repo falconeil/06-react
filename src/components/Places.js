@@ -31,8 +31,14 @@ state = {
 		location:'Galicia',
 		liked: false
 	}],
+	originalPlaces:[]
 }
 
+componentWillMount(){
+	this.setState({
+		originalPlaces: this.state.places
+	})
+}
 
 toggle = (i) => {
 
@@ -45,10 +51,25 @@ this.setState({
 })
 }
 
+search = (e) => {
+
+	let letters = e.target.value.toUpperCase()
+	console.log(e)
+
+	let places = this.state.originalPlaces.filter((a) =>  a.title.toUpperCase().includes(letters))
+
+	this.setState({
+		places: places
+	})
+}
+
+
+
 	render() {
 
 		return (
 			<div>
+			<Search search={this.search}/>
 				<h1>{this.state.places.length} Places </h1>
 				<div className='thumbnails'>{
 				this.state.places.map((n, i) => {return <Thumbnail  n={n} toggle={this.toggle} index={i}/>

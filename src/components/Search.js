@@ -4,12 +4,14 @@ import '../styles/Search.css'
 
 class Search extends React.Component {
 
+
+
 render() {
 
 	return (
 
 			<div className='searchBar'>
-				<input ref='textBox'  type='text' placeholder="Search" onChange={this.state.search}/>
+				<input type='text' placeholder="Search" onChange={this.props.search}/>
 			</div>
 
 
